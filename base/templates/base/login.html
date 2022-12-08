@@ -1,0 +1,23 @@
+
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <h1>Тестовое задание “Менеджер заметок”</h1>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="button" type="submit" value="Вход">
+    </form>
+    <p>Нет аккаунта? <a href="{% url 'register' %}">Регистрация</a></p>
+</div>
+
+
+
+
+
+
+{% endblock content %}
